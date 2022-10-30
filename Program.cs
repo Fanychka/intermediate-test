@@ -34,3 +34,30 @@ string OriginalArrayToString(string[] array)
     return txt;
 }
 string txt = OriginalArrayToString(thirdArray);
+
+// Шаг 2 Метод 2 - пишем функцию выборки элементов массива, длина которых не превышает 3 символа (включительно) и преобразования их в строку.
+
+string SelectedArrayToString(string[] array)
+{
+    string textSorted = "[";
+
+    for (int i = 0; i < array.Length; i++)
+        
+        if (array[i].Length == 1)
+        {
+            textSorted += "\"" + array[i] + "\",";
+            
+        }
+        
+            else if (array[i].Length <=3)
+            { 
+                textSorted += "\"" + array[i]+ "\"";
+                
+            }
+        textSorted += "]";
+    
+    return textSorted;
+}
+
+string textSorted = SelectedArrayToString(thirdArray);
+System.Console.WriteLine($"Наш первоначальный массив: {txt}   ->   {textSorted} отсортировынный массив элементов длиной от 0 до 3 символов");
