@@ -17,3 +17,20 @@
 string[] firstArray = { "hello", "2", "world", ":-)" };
 string[] secondArray = { "1234", "1567", "-2", "computer science" };
 string[] thirdArray = { "Russia", "Denmark", "Kazan" };
+
+
+
+// Шаг 1 Метод 1 - пишем функцию преобразования массива в строку.
+
+string OriginalArrayToString(string[] array)
+{
+    string txt = "[\"";
+    
+    for (int i = 0; i < array.Length; i++)
+    {
+        txt += array[i];
+        txt += i != array.Length - 1 ? "\", \"" : "\"]";
+    }
+    return txt;
+}
+string txt = OriginalArrayToString(thirdArray);
